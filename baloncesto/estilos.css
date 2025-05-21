@@ -1,0 +1,294 @@
+/* ===== Estilos generales ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('https://i.pinimg.com/736x/81/f5/c4/81f5c4f675ce3c48997580324f2deb26.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Encabezado ===== */
+.encabezado {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.encabezado::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('https://e0.pxfuel.com/wallpapers/874/835/desktop-wallpaper-basketball-balls.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;  /* Fondo más transparente */
+  z-index: -1;
+}
+
+/* Logo dentro del encabezado */
+.logo {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+/* ===== Navegación ===== */
+nav a {
+  color: #fff;
+  background-color: #ff6f3c;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #ffaa00;
+}
+
+/* ===== Títulos animados ===== */
+.titulo-animado {
+  font-size: 2.8rem;
+  font-weight: 900;
+  animation: titleColorCycle 10s infinite, titlePop 2s ease-in-out;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Contorno negro */
+}
+
+h2, h3 {
+  animation: titleColorCycle 10s infinite, titlePop 2s ease-in-out;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Contorno negro */
+}
+
+/* ===== Sección historia ===== */
+.historia p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #eee;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  text-align: justify;
+}
+
+/* ===== Sección influencia ===== */
+.influencia h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.influencia p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #eee;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  text-align: justify;
+}
+
+.gifs-influencia {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.gifs-influencia img {
+  width: 280px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.gifs-influencia img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ===== Contenedores generales ===== */
+.historia, .influencia, .leyendas {
+  margin-bottom: 40px;
+}
+
+/* ===== Tarjeta jugador ===== */
+.jugador {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.jugador:hover {
+  transform: scale(1.03);
+}
+
+.jugador img {
+  width: 300px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ===== Contenedor de videos ===== */
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+iframe {
+  width: 320px;
+  height: 180px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ===== Contenedor principal ===== */
+.main-container {
+  flex: 1 0 auto; /* para que crezca y empuje el footer */
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ===== Footer fijo ===== */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #b5792b;
+  color: white;
+  text-align: center;
+  padding: 1px 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 -3px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Para evitar que el contenido quede debajo del footer */
+body > .main-container {
+  padding-bottom: 60px; /* debe ser al menos igual a la altura del footer */
+}
+
+/* ===== Animaciones ===== */
+@keyframes titlePop {
+  0% { transform: scale(0.7); opacity: 0; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes titleColorCycle {
+  0%   { color: #ff6f3c; }
+  25%  { color: #ffa500; }
+  50%  { color: #ffcc00; }
+  75%  { color: #fcbf49; }
+  100% { color: #ff6f3c; }
+}
+
+/* ===== Proyecto de Vida ===== */
+
+.fotos-proyecto {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.fotos-proyecto img {
+  width: 200px;      /* ancho fijo */
+  height: 300px;     /* alto fijo */
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;    /* evitar que se reduzcan en flexbox */
+}
+
+.fotos-proyecto img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+.seccion-vida {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.seccion-vida h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.seccion-vida p, .seccion-vida li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Botón música */
+#music-control {
+  position: fixed;
+  bottom: 80px; /* un poco arriba del footer */
+  right: 20px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(255, 126, 95, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  z-index: 1100;
+  user-select: none;
+}
+
+#music-control:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  box-shadow: 0 6px 12px rgba(254, 180, 123, 0.6);
+  transform: scale(1.05);
+}
+
+#music-control:active {
+  transform: scale(0.95);
+}

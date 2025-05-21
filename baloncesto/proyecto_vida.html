@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyecto de Vida</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/023/579/999/non_2x/illustration-of-modern-basketball-logo-it-s-for-fighter-concept-png.png" />
+ </head>
+<body>
+
+  <header class="encabezado">
+    <h1 class="titulo-animado">Proyecto de Vida</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="proyecto_vida.html">Proyecto de Vida</a>
+    </nav>
+  </header>
+
+  <main class="main-container">
+
+    <!-- Galería Personal -->
+    <section>
+      <h2 class="titulo-seccion">Galería Personal</h2>
+      <div class="fotos-proyecto">
+        <img src="https://raw.githubusercontent.com/imagenes-web/samuelVillalba/3878b9575539b0a576209e366423123555e73f4f/villalba.jpeg" alt="Foto 1 de Samuel Villalba" />
+        <img src="https://raw.githubusercontent.com/imagenes-web/samuelVillalba/3878b9575539b0a576209e366423123555e73f4f/sjuega.jpeg" alt="Samuel jugando baloncesto" />
+        <img src="https://raw.githubusercontent.com/imagenes-web/samuelVillalba/3878b9575539b0a576209e366423123555e73f4f/samuel.jpeg" alt="Retrato de Samuel" />
+        <img src="https://raw.githubusercontent.com/imagenes-web/samuelVillalba/3878b9575539b0a576209e366423123555e73f4f/samu.jpeg" alt="Otra imagen de Samuel" />
+      </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section class="seccion-vida">
+      <h2>Sobre Mí</h2>
+      <p>
+        Mi nombre es <strong>Samuel Fernando Villalba Largo</strong>, tengo 16 años. Desde pequeño he sido muy apasionado por el deporte. 
+        En ese entonces me gustaba mucho el fútbol, aún me gusta, pero como todos lo saben, mi pasión hoy en día es el <strong>baloncesto</strong>, y es lo que más me gusta.
+      </p>
+      <p>
+        Mi mayor sueño es llegar lo más lejos posible en este deporte, porque es lo que más me apasiona y en lo que he demostrado tener talento. 
+        La mayoría de personas que empiezan a jugar este deporte tan tarde no se destacan, pero yo he logrado avanzar.
+      </p>
+      <p>
+        Mis padres son <strong>Sorany Andrea Largo Aguirre</strong> y <strong>Jairo Neider Villalba Ramírez</strong>. Todo lo que he logrado en el baloncesto es gracias a ellos, 
+        porque me han apoyado en todo, a pesar de mis errores.
+      </p>
+      <p>
+        Me considero una persona <strong>extrovertida</strong> y recochera, aunque a veces tengo un humor pesado, como muchos lo sabrán. 
+        Mi color favorito es el <strong>negro</strong>, mi comida casera favorita es el <strong>sudado de pollo</strong>, y callejera, la <strong>salchipapa</strong>.
+      </p>
+    </section>
+
+    <!-- Mis Metas -->
+    <section class="seccion-vida">
+      <h2>Mis Metas</h2>
+      <ul>
+        <li><strong>En 2 años:</strong> Finalizar mis estudios y adquirir experiencia laboral.</li>
+        <li><strong>En 6 años:</strong> Ser profesional y estar trabajando en lo que me apasiona.</li>
+        <li><strong>En 10 años:</strong> Tener estabilidad financiera y seguir aprendiendo cada día.</li>
+        <li><strong>Más allá:</strong> Ser una influencia positiva para mi comunidad y alcanzar mis sueños personales.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Samuel Villalba | Todos los derechos reservados</p>
+  </footer>
+
+ 
+  <!-- Botón de música y audio -->
+  <button id="music-control">🎵 Música</button>
+  <audio id="musica" src="https://raw.githubusercontent.com/imagenes-web/samuelVillalba/37d8c8d3e6d684cb679ea5b66434573b650588cf/Fahlberg%20-%20Since%20I%20Fell%20For%20You%20(MIDH%20048).mp3" preload="auto"></audio>
+
+  <script>
+    const music = document.getElementById('musica');
+    const btn = document.getElementById('music-control');
+
+    let playing = false;
+
+    btn.addEventListener('click', () => {
+      if (playing) {
+        music.pause();
+        btn.textContent = '🎵 Música';
+      } else {
+        music.play();
+        btn.textContent = '⏸️ Pausar';
+      }
+      playing = !playing;
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Baloncesto</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/023/579/999/non_2x/illustration-of-modern-basketball-logo-it-s-for-fighter-concept-png.png" />
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="encabezado">
+    <h1 class="titulo-animado">El Baloncesto: Historia e Influencia en la Juventud</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="proyecto_vida.html">Proyecto de Vida</a>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="main-container">
+
+    <!-- Sección Historia -->
+    <section class="historia">
+      <h2>Historia del Baloncesto</h2>
+      <p>
+        El baloncesto fue inventado en 1891 por James Naismith, un profesor canadiense que buscaba crear un deporte de interior para mantener activos a sus alumnos durante el invierno. Desde entonces, el baloncesto ha crecido hasta convertirse en uno de los deportes más populares del mundo. Su impacto social es grande, pues fomenta valores como el trabajo en equipo, la disciplina y la superación personal. Además, ha servido como plataforma para la inclusión y la integración cultural, uniendo a personas de diferentes orígenes y promoviendo el desarrollo social en muchas comunidades.
+      </p>
+    </section>
+
+    <!-- Sección Leyendas -->
+    <section class="leyendas">
+      <h2>Grandes Leyendas del Baloncesto</h2>
+
+      <div class="jugador">
+        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/893.png" alt="Michael Jordan" />
+        <h3>Michael Jordan</h3>
+        <p>Considerado el mejor jugador de baloncesto de todos los tiempos. Ganó seis campeonatos de la NBA con los Chicago Bulls.</p>
+      </div>
+
+      <div class="jugador">
+        <img src="https://ew.com/thmb/XoWCPkHqWW_fgYYutiw9ugmthbw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/kobe-bryant-0d4dffb9eac446ec8aa5a5536f6ca1ff.jpg" alt="Kobe Bryant" />
+        <h3>Kobe Bryant</h3>
+        <p>La “Mamba Negra” jugó 20 temporadas con los Lakers. Admirado por su talento, mentalidad competitiva y cinco títulos de la NBA.</p>
+      </div>
+
+      <div class="jugador">
+        <img src="https://motociclismo.pt/wp-content/uploads/2025/04/202504image-13543-scaled-1.jpg" alt="LeBron James" />
+        <h3>LeBron James</h3>
+        <p>Figura clave del baloncesto actual. Ganador de múltiples campeonatos y conocido por su fuerza, inteligencia y liderazgo.</p>
+      </div>
+    </section>
+
+    <!-- Sección Videos -->
+    <section class="videos">
+      <h2>Aprende lo Básico</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/5F_HNvP0nZY" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/616hPGhn9Jg" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/zuU_fw4TdK0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Sección Influencia -->
+    <section class="influencia">
+      <h2>Influencia en los Jóvenes</h2>
+      <p>
+        El baloncesto tiene una gran influencia en los jóvenes, ya que no solo es un deporte divertido, sino también una herramienta para su desarrollo personal. A través del baloncesto, los jóvenes aprenden a trabajar en equipo, a ser disciplinados y a manejar la presión, habilidades que les sirven en la vida diaria. Además, el deporte les ofrece una vía para mantenerse activos, saludables y alejados de situaciones negativas. Muchos jóvenes se enamoran del baloncesto por la emoción del juego, la camaradería que crean con sus compañeros y la inspiración que reciben de sus ídolos deportivos, quienes muestran que con esfuerzo y dedicación se pueden alcanzar grandes metas.
+      </p>
+
+      <!-- Gifs de influencia -->
+      <div class="gifs-influencia">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzR1amp1cTltOWQyYmdrcWIwOW00bTM3dmRudXpoZzh2bG5sNnp3NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5QKywOuwFfqGbxMWBh/giphy.gif" alt="Baloncesto y jóvenes gif 1" />
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2J1czFkNTl0eHMwMzYxcGJsNjg4djZ6MzJrNWJtZmRiazBkazY3ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiTnLR1i2bNHNAKwU/giphy.gif" alt="Baloncesto y jóvenes gif 2" />
+      </div>
+    </section>
+
+  </main>
+
+   <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Samuel Villalba | Todos los derechos reservados</p>
+  </footer>
+
+
+  <!-- Botón de música y audio -->
+  <button id="music-control">🎵 Música</button>
+  <audio id="musica" src="https://raw.githubusercontent.com/imagenes-web/samuelVillalba/37d8c8d3e6d684cb679ea5b66434573b650588cf/Fahlberg%20-%20Since%20I%20Fell%20For%20You%20(MIDH%20048).mp3" preload="auto"></audio>
+
+  <script>
+    const music = document.getElementById('musica');
+    const btn = document.getElementById('music-control');
+
+    let playing = false;
+
+    btn.addEventListener('click', () => {
+      if (playing) {
+        music.pause();
+        btn.textContent = '🎵 Música';
+      } else {
+        music.play();
+        btn.textContent = '⏸️ Pausar';
+      }
+      playing = !playing;
+    });
+  </script>
+</body>
+</html>
